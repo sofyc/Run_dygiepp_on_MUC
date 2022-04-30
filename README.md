@@ -1,18 +1,18 @@
-# run_dygie_on_MUC 
+# Run_dygiepp_on_muc
 
 Run dygiepp model(https://github.com/dwadden/dygiepp) on MUC-4 dataset
 
 ## Convert GTT format data to Dygie format data and add incident_types before each document
 
-The processed folder contains strings that are not mentioned in the document (date + location) while processed_string only contains responses with direct mentions in the document.
+Aliva(https://github.com/IceJinx33) processed MUC dataset. The processed folder contains strings that are not mentioned in the document (date + location) while processed_string only contains responses with direct mentions in the document.
 ```
-cd run_dygie_on_MUC
+cd Run_dygiepp_on_muc
 python data/MUC_processes_string/process_muc.py
 ```
 
 ## Training a model
 
-First, write a training config muc_processed_string_{max_span_width}_{coref_loss_weights}.jsonnet. Then run
+First, write a training config muc_processed_string_{max_span_width}_{coref_loss_weights}.jsonnet and a training script train_muc_processed_string_{max_span_width}_{coref_loss_weights}.sh. Then run
 
 ```bash
 scripts/train_muc_processed_string_{max_span_width}_{coref_loss_weights}.sh
