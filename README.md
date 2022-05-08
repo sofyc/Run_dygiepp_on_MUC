@@ -2,6 +2,8 @@
 
 Run dygiepp model(https://github.com/dwadden/dygiepp) on MUC-4 dataset
 
+The MUC dataset has a role called incident_type that can only be one of {'kidnapping': 0, 'attack':1, 'bombing':2, 'robbery':3, 'arson':4, 'bombing / attack':5, 'attack / bombing':6, 'forced work stoppage':7}. We modify the original Dygiepp so that the predicted incident_type can only be one of the labels.
+
 ## Convert GTT format data to Dygie format data and add incident_types before each document
 
 Aliva(https://github.com/IceJinx33) processed MUC dataset. The processed folder contains strings that are not mentioned in the document (date + location) while processed_string only contains responses with direct mentions in the document.
